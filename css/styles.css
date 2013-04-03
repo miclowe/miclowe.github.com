@@ -9,6 +9,10 @@ p {
   line-height: 1.5em;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 .clear {
   clear: both;
 }
