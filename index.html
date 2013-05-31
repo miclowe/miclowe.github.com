@@ -3,11 +3,13 @@
   <head>
     <meta charset="utf-8">
     <title>Michelle Lowe</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/portfolio.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <link href='http://fonts.googleapis.com/css?family=Arbutus+Slab' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -16,44 +18,61 @@
 
       ga('create', 'UA-41248961-1', 'miclowe.github.io');
       ga('send', 'pageview');
-
     </script>
   </head>
 
   <body>
-    <div class="container">
-      <header class="banner">
-          <div id = "profile-pic"><img src="images/profile-pic.jpg" alt="Profile Pic"></div>
-      </header>
-      <div class="hero-unit">
-        <div class="span6">
-          <h3>Hey there, I'm</h3><br /><h1>Michelle</h1>
-        </div>
-        <h4 class="clear">Student of <a href="https://generalassemb.ly/education/web-development-immersive" target=
-          "_blank">General Assembly's Web Development Immersive</a> course.<br />
-          Twelve weeks. All day. Every day.</h4>
-        <p>Over the next 3 months, I'll be learning:</p>
-        <ul>
-          <li>git</li>
-          <li>html, css, javascript</li>
-          <li>ruby, ruby on rails</li>
-          <li>and tons more</li>
-        </ul>
-        <p>It'll be a wild and crazy adventure, but by June 2013, I'll be ready to build some amazing web applications to achieve world peace and/or domination!</p>
-        <p>If I'm not toiling away at my laptop, I'm probably relaxing, running, golfing or just enjoying the outdoors.</p>
-        <a href="https://https://github.com/miclowe" target="_blank">
-          <img src="images/github-icon.png" alt="GitHub" />
-        </a>
-        <a href="https://twitter.com/mich_lowe" target="_blank">
-          <img src="images/twitter-icon.png" alt="Twitter" />
-        </a>
-        <a href="http://www.linkedin.com/pub/michelle-lowe/4/3a7/a40" target="_blank">
-          <img src="images/linkedin-icon.png" alt="LinkedIn" />
-        </a>
-        <a href="http://instagram.com/miclowe" target="_blank">
-          <img src="images/instagram-icon.png" alt="Instagram" />
-        </a>
+    <header class="container_12 alpha">
+      <div id="logo">
+        <img src="images/logo.png" />
+        <p><span id="fname">Michelle</span> Lowe</p>
       </div>
-    </div>
+      <div id="icons" class="grid_6 prefix_3">
+        <a href="#about"><div id="about_icon" class="icon"><span class="icon_txt">About</span></div></a>
+        <a href="#projects"><div id="project_icon" class="icon"><span class="icon_txt">Projects</span></div></a>
+        <a href="#contact"><div id="contact_icon" class="icon"><span class="icon_txt">Contact</span></div></a>
+      </div>
+    </header>
+    <section id="about" class="container_12 alpha">
+      <div id="about_header"><h1 class="section_header_txt">&mdash; About &mdash;</h1></div>
+      <div class="section_container grid_8">
+          <img src="images/profile.jpg" />
+          <p>Hi, I'm Michelle.</p>
+          <p>After years of providing technical support for applications written by others, I've decided to take the plunge and learn to develop my own applications. I'm currently enrolled in General Assembly's <a href="https://generalassemb.ly/education/web-development-immersive" target="_blank">Web Development Immersive</a> program turning myself into a "full-stack" web developer, learning everything from Ruby on Rails, HTML, CSS, JavaScript to Github. The experience has been tiring and intense, but I'm having a great time putting my creative and technical skills together. WDI will be coming to an end soon, and I'm looking forward to taking my new skills to the next level.</p>
+          <p>I was born and raised in San Francisco, CA, and I love being outdoors. Once the fog burns off, you may find me on a golf course, running along a trail or just lounging on a deck. Oh, and I have a soft spot for chocolate chip cookies.</p>
+      </div>
+    </section>
+    <section id="projects" class="container_12 alpha">
+      <div id="projects_header"><h1 class="section_header_txt">&mdash; Projects &mdash;</h1></div>
+      <div class="section_container grid_8">
+        <div class="projects_tile">
+          <a href="http://bookworm2.herokuapp.com" target="_blank"><img src="images/bookworm.jpg" /></a>
+          <div class="projects_detail grid_8 prefix_2">
+            <p><a href="http://bookworm2.herokuapp.com" target="_blank">Bookworm</a> is a book search/recommendation web application built on the Ruby on Rails framework. Visitors can search by title, author or subject, and logged in users can save book titles to their bookbag.</p>
+            <p>The GoodReads API was used to retrieve the search results, book details and recommended readings, and the Nokogiri gem was used to parse the XML format returned by the API as well as some screen scraping.</p>
+          </div>
+        </div>
+        <div class="projects_tile">
+          <a href="http://cssstache.herokuapp.com" target="_blank"><img src="images/css_stache.jpg" /></a>
+          <div class="projects_detail grid_8 prefix_2">
+            <p><a href="http://cssstache.herokuapp.com" target="_blank">CSS Stache</a> is a web application designed to showcase pure CSS-based designs also built on the Rails framework. I mainly contributed to the back-end of this group project by incorporating the Devise gem for authentication, the Rails Admin gem for administration of the application and adding commenting and tagging features.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="container_12 alpha">
+      <div id="contact_header"><h1 class="section_header_txt">&mdash; Contact &mdash;</h1></div>
+        <div class="section_container grid_8">
+          <div id="social_icons" class="grid_6">
+            <a href="https://github.com/miclowe" target="_blank"><img src="images/github.png"></a>
+            <a href="http://www.linkedin.com/pub/michelle-lowe/4/3a7/a40" target="_blank"><img src="images/linkedin.png"></a>
+            <a href="https://twitter.com/mich_lowe" target="_blank"><img src="images/twitter.png"></a>
+            <a href="mailto:mklowe2012@gmail.com"><img src="images/email.png"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+    </footer>
   </body>
 </html>
