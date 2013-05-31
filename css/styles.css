@@ -18,7 +18,7 @@ footer {
 }
 
 #logo {
-  margin: 100px 0 auto;
+  margin: 50px 0 auto;
   text-align: center;
 }
 
@@ -36,6 +36,10 @@ footer {
 
 #fname {
   color: #e74c3c;
+}
+
+#title {
+  font-size: 20pt;
 }
 
 #icons {
