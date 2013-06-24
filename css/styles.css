@@ -1,7 +1,8 @@
 body {
   background-color: #DBDBDB;
   background:url('../images/bg.png');
-  color: #6C7778;
+  color: #545554;
+  /*color: #6C7778;*/
   font-family: 'Trebuchet MS', sans-serif;
 }
 
@@ -15,6 +16,11 @@ footer {
   background-color: #6C7778;
   min-height: 50px;
   width: 100%;
+}
+
+a {
+  font-weight: 700;
+  text-decoration: none;
 }
 
 #logo {
@@ -146,9 +152,8 @@ footer {
   margin: 0 15px;
 }
 
-.section_container a {
-  font-weight: 700;
-  text-decoration: none;
+hr {
+  clear: both;
 }
 
 .projects_tile {
@@ -157,16 +162,12 @@ footer {
 
 .projects_tile img {
   float: none;
-  margin: 20px;
+  /*margin: 20px;*/
   position: relative;
 }
 
 .projects_detail {
   text-align: justify;
-}
-
-.projects_detail:first {
-  border-bottom: 1px solid #999999;
 }
 
 .contact_txt {
