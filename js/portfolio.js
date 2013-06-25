@@ -36,4 +36,14 @@ $(document).ready(function(){
     event.preventDefault();
   });
 
+  $('.bookworm_slider').bxSlider({
+    slideWidth: 550
+  });
+  $('.cssstache_slider').bxSlider({
+    slideWidth: 550
+  });
+  $('.gogomuni_slider').bxSlider({
+    slideWidth: 550
+  });
+
 });
